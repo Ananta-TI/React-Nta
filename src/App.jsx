@@ -5,7 +5,7 @@ import './assets/tailwind.css';
 // import Forgot from './pages/Auth/Forgot';
 import { BreadcrumbProvider } from './context/BreadcrumbContext';
 import { Routes, Route } from 'react-router-dom';
-import MainLayout from './layouts/mainLayout';
+import MainLayout from './layouts/MainLayout';
 import AuthLayout from './layouts/AuthLayout';
 import GuestLayout from './layouts/GuestLayout';
 import Loading from './components/Loading'; // ← ini dia
