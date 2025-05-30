@@ -1,4 +1,4 @@
-import { MdDashboard, MdPeople, MdAssignment, MdShoppingCart } from "react-icons/md";
+import { MdDashboard, MdPeople, MdAssignment, MdShoppingCart, MdFastfood  } from "react-icons/md";
 import { useBreadcrumb } from "../context/BreadcrumbContext";
 import { useNavigate } from "react-router-dom";
 
@@ -11,6 +11,8 @@ export default function Sidebar() {
     { label: "Users1", icon: <MdPeople size={20} />, path: "/users1", key: "users1" },
     { label: "Customers1", icon: <MdAssignment size={20} />, path: "/customers1", key: "customers1" },
     { label: "Orders", icon: <MdShoppingCart size={20} />, path: "/orders", key: "orders" },
+    // { label: "Orders", icon: <MdShoppingCart size={20} />, path: "/orders", key: "orders" },
+    { label: "Products", icon: <MdFastfood  size={20} />, path: "/products", key: "products" },
   ];
 
   // Fungsi update breadcrumb sesuai key menu
@@ -20,6 +22,7 @@ export default function Sidebar() {
       users1: ["Users1"],
       customers1: ["Customers1"],
       orders: ["Orders"],
+      products: ["Products"],
     };
     updateBreadcrumb(breadcrumbs[key] || ["Dashboard"]);
   };

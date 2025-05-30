@@ -20,7 +20,7 @@ import SplashCursor from './components/SplashCursor.jsx';
 import Customers1 from './pages/Customers1.jsx';
 import User1 from './pages/User1.jsx';
 import Home from './pages/hero.jsx';
-
+import Products from './pages/products.jsx';
 // ananta 
 
 // Lazy loaded pages
@@ -34,6 +34,8 @@ const Error403 = lazy(() => import('./pages/Error403'));
 const Hero = lazy(() => import('./pages/hero.jsx'));
 const Register = lazy(() => import('./pages/Auth/Register'));
 const Forgot = lazy(() => import('./pages/Auth/Forgot'));
+const ProductDetail = lazy(() => import("./pages/ProductDetail"))
+
 // const Users1 = lazy(() => import('./pages/User1'));
 // const Customers1 = lazy(() => import('./pages/Customers1'));
 
@@ -106,6 +108,9 @@ function App() {
             <Route path="/error-400" element={<Error400 />} />
             <Route path="/error-401" element={<Error401 />} />
             <Route path="/error-403" element={<Error403 />} />
+            <Route path="/products" element={<Products/>}/>
+            			    <Route path="/products/:id" element={<ProductDetail />} /> 
+
           </Route>
 
           <Route element={<AuthLayout />}>
