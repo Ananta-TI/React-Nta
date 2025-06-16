@@ -21,6 +21,9 @@ import Customers1 from './pages/Customers1.jsx';
 import User1 from './pages/User1.jsx';
 import Home from './pages/hero.jsx';
 import Products from './pages/products.jsx';
+import Notes from './pages/notes.jsx'
+import { notesAPI } from "./services/notesAPI"
+
 // ananta 
 
 // Lazy loaded pages
@@ -105,11 +108,12 @@ function App() {
             <Route path="/orders" element={<Orders orders={filteredOrders} />} />
             <Route path="/customers1" element={<Customers1 customers={filteredCustomers} />} />
             <Route path="/users1" element={<User1 />} />
+            <Route path="/notes" element={<Notes />} />
             <Route path="/error-400" element={<Error400 />} />
             <Route path="/error-401" element={<Error401 />} />
             <Route path="/error-403" element={<Error403 />} />
             <Route path="/products" element={<Products/>}/>
-            			    <Route path="/products/:id" element={<ProductDetail />} /> 
+            <Route path="/products/:id" element={<ProductDetail />} /> 
 
           </Route>
 

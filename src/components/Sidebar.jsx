@@ -1,4 +1,4 @@
-import { MdDashboard, MdPeople, MdAssignment, MdShoppingCart, MdFastfood  } from "react-icons/md";
+import { MdDashboard, MdPeople, MdAssignment, MdShoppingCart, MdFastfood,MdNoteAdd  } from "react-icons/md";
 import { useBreadcrumb } from "../context/BreadcrumbContext";
 import { useNavigate } from "react-router-dom";
 
@@ -13,6 +13,7 @@ export default function Sidebar() {
     { label: "Orders", icon: <MdShoppingCart size={20} />, path: "/orders", key: "orders" },
     // { label: "Orders", icon: <MdShoppingCart size={20} />, path: "/orders", key: "orders" },
     { label: "Products", icon: <MdFastfood  size={20} />, path: "/products", key: "products" },
+    { label: "Notes", icon: <MdNoteAdd size={20} />, path: "/notes", key: "notes" },
   ];
 
   // Fungsi update breadcrumb sesuai key menu
@@ -23,6 +24,7 @@ export default function Sidebar() {
       customers1: ["Customers1"],
       orders: ["Orders"],
       products: ["Products"],
+      products: ["Notes"],
     };
     updateBreadcrumb(breadcrumbs[key] || ["Dashboard"]);
   };
@@ -37,8 +39,8 @@ export default function Sidebar() {
     <aside className="flex flex-col w-[250px] min-h-screen bg-white p-10 shadow-lg">
       {/* Logo & Subtitle */}
       <div className="flex flex-col mb-10">
-        <h1 className="font-PoppinsBold text-[48px] text-gray-900">
-          TAK <span className="text-green-600">Sedap</span><span className="text-red-600">.</span>
+        <h1 className="font-PoppinsBold font-bold text-[40px] text-gray-900">
+          TAK<span className="text-green-600">Sedap</span><span className="text-red-600">.</span>
         </h1>
         <span className="font-semibold text-gray-400">Modern Admin Dashboard</span>
       </div>
